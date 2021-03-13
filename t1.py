@@ -99,7 +99,7 @@ if __name__ == "__main__":
         txt = f.read()
     pairs = getPairsFromText(txt) # 临时版，检测金额，将文本拆分
     pairs = merge(pairs) # 合并同类item
-    #pairs = removeBadCase(pairs) # TODO 消除无效项
+    pairs = removeBadCase(pairs) # TODO 消除无效项
     for e, a, c in pairs:
         print(" item: {},\n total amount: {:.2f},\n count: {},\n".format(e,a,c))
 
